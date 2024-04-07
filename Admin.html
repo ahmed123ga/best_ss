@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Best town Staff Page</title>
+  <style>
+    /* تعديلات CSS */
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      padding: 20px 30px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .box {
+      margin: 20px auto;
+      width: 400px;
+      padding: 20px;
+      border: 2px solid red;
+      text-align: left;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .Dod {
+      font-size: 20px;
+      margin: 20px auto;
+      width: 200px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>مربع الاختيارات</h2>
+  <form>
+    <label for="mySelect1">
+      <select id="mySelect1">
+        <option value="نـظام الـترقيــات">نـظام الـترقيــات</option>
+        <option value="تــسلــسل الــرتب">تــسلــسل الــرتب</option>
+        <option value="الـقوانين الـخاصة بنا">الـقوانين الـخاصة بنا</option>
+      </select>
+    </label>
+    <br>
+    <br>
+    <button onclick="showText()">إضـغط هـنا لإظهـار الـنص</button>
+  </form>
+  <br>
+  <div id="output" class="box"></div>
+<div  class="Dod"> 
+  <p>Programmed by : px.1</p>
+</div>
+  <script>
+    function showText() {
+      var selectElement = document.getElementById("mySelect1");
+      var outputElement = document.getElementById("output");
+      var selectedOption = selectElement.value
+      event.preventDefault() // منع عملية التحديث التلقائي
+      
+
+
+
+
+      if (selectedOption === "نـظام الـترقيــات") {
+        outputElement.innerHTML = `
+          <center>نـظام الـترقيــات لـدي بيـست تاون هــو :</center>
+          <br>
+          <p>للترقية من Support lvl1 الي support lvl2 عليك عمل 10ريبورت</p>
+          <p>للترقية من support lvl2 الي support lvl max عليك عمل 15ريبورت</p>
+          <p>للترقية من support lvl max الي  trial moderator عليك عمل 25ريبورت</p>
+          <p>للترقية من trial moderator الي moderator عليك عمل 30ريبورت</p>
+          <p>للترقية من moderator الي Admin عليك عمل 35ريبورت</p>
+          <p>للترقية من Admin الي director عليك بمعاقبة 10لاعب</p>
+          <p>للرتقية من director الي senior admin عليك بمعاقبة 15لاعب</p>
+          <p>للترقية من senior admin الي super admin عليك معاقبة 25الاعب</p>
+          <p>للترقية من super admin الي leed admin عليك معاقبة 40لاعب</p>
+          <p>للترقية من leed admin الي head of admins عليك معاقبة 70لاعب</p>
+        `;
+      } else if (selectedOption === "تــسلــسل الــرتب") {
+        outputElement.innerHTML = `
+          <center>نـظام  تـسلـسل الـرتب لـدي بيـست تاون هــو :</center>
+          <br>
+          <p>Support lvl1</p>
+          <p>support lvl2</p>
+          <p>support lvl max</p>
+          <p>moderator</p>
+          <p>Trial Admin</p>
+          <p>Admin</p>
+          <p>director</p>
+          <p>senior admin</p>
+          <p>super admin</p>
+          <p>leed admin</p>
+          <p>Admins Management⁣</p>
+          <p>head of admins</p>
+          <p>vice president</p>
+          <p>president</p>
+          <p>ceo</p>
+          <p>Vice  founder</p>
+          <p>founder</p>
+          <p>〢 Network owner</p>
+        `;
+      } else if (selectedOption === "الـقوانين الـخاصة بنا") {
+        outputElement.innerHTML = `
+<p>عدم استخدام الرتبة لمصحلة شخصية</p>
+        <p>عدم سحب الاشخاص بدون اخذ اذن منهم</p>
+        <p>عدم سجن شخص او اعطاءه بان او اي من العقوبات دون انزال الدليل بالديسكورد</p>
+        <p>احترام الرتب الاعلي منك</p>
+        <p>عند عدم وجود اي من الضغطاط اللعب ك اربي وليس ك اداري</p>
+        <p>عند موجود ادارين في ديوتي الادمن مجبورين علي غلق ديوتي الفاكشن</p>
+        <p>عدم دخول فاكشن دول اخذ اذن من مسؤل توزيعات الادارة</p>
+        <p>الواسطات بجميع انواعها</p>
+        <p>الحقد ممنوع</p>
+        <p>عند وجود ضغط وعدم قدرة الاداريين علي انهاء المشاكل يرجي ترك الرول بلاي والاتجاه الي شارة الادمنية</p>
+        <p>عدم معاقبة اللاعبين دون سابق انذار</p>
+        <p>احترام جميع الاعضاء والرتب المنخفضة</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
